@@ -80,17 +80,8 @@ export default function WhatfixRetoolProjects({ onClose }) {
                   <span>Optimization</span>
                 </div>
 
-                {/* soft area chart backdrop for vibe */}
-                <div className="mt-6 h-24">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <AreaChart data={ebrUpcoming} margin={{ top: 0, right: 8, left: 8, bottom: 0 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(148,163,184,.18)" />
-                      <XAxis dataKey="date" stroke="currentColor" hide />
-                      <YAxis stroke="currentColor" hide />
-                      <Area type="monotone" dataKey="ebr" stroke="currentColor" fill="rgba(255,109,45,.10)" />
-                    </AreaChart>
-                  </ResponsiveContainer>
-                </div>
+                {/* Removed soft area chart per request; keep a little breathing room */}
+                <div className="mt-6" />
               </div>
             </div>
           </section>
