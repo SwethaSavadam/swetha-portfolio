@@ -231,7 +231,7 @@ export default function O9Parallax({ onClose }) {
                   '“One source of truth” for GRR/NRR/Net ARR/Win rate across C- and VP-views',
                   'Faster decisions via auto-generated weekly packs and live drill-downs',
                   'Earlier detection of churn risk segments and at-risk accounts',
-                  'Clear ownership on KRAs — status visibility drives follow-through'
+                  'Clear ownership on KRAs; status visibility drives follow-through'
                 ]}
                 // kpis={[
                 //   { value: '−6h/wk', label: 'prep time' },

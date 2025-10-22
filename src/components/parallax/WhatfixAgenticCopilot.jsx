@@ -97,7 +97,7 @@ export default function WhatfixAgenticCopilot({ onClose }) {
             <div className="sticky top-0 h-[66vh] flex items-center justify-center px-6">
               <div className="text-center max-w-[1200px] w-full mx-auto">
                 <motion.h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-strong">
-                  Whatfix — Agentic AI Copilot for CSMs
+                  Agentic AI Copilot for CSMs
                 </motion.h3>
                 <p className="mt-3 text-app">
                   Ask a question. The agent plans, retrieves trusted answers from G-Drive/Confluence, and offers next steps via <b>n8n</b>.
