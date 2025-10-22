@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Theme tokens & helpers ---------- */
+:root{
+  --bg: #ffffff;
+  --text: #0f172a;        /* slate-900 */
+  --muted: #475569;       /* slate-600 */
+  --card: #ffffff;
+  --panel: rgba(255,255,255,0.85);
+  --placeholder: #64748b; /* slate-500 */
+  --soft-ring: rgba(2,6,23,0.08);
+}
+.dark{
+  --bg: #0b1220;
+  --text: #e5e7eb;        /* slate-200 */
+  --muted: #cbd5e1;       /* slate-300 */
+  --card: #0f172a;        /* slate-900 */
+  --panel: rgba(15,23,42,0.85);
+  --placeholder: #94a3b8; /* slate-400 */
+  --soft-ring: rgba(148,163,184,0.25);
+}
+
+.text-app{ color: var(--text); }
+.text-strong{ color: var(--text); }
+.text-muted{ color: var(--muted); }
+.bg-card{ background-color: var(--card); color: var(--text); }
+.bg-panel{ background-color: var(--panel); color: var(--text); }
+.ring-soft{ box-shadow: 0 1px 0 var(--soft-ring); }
+
+/* Headings inherit high-contrast */
+h1,h2,h3,h4,h5,h6{ color: var(--text); }
+
+/* Inputs placeholders readable in both themes */
+input::placeholder, textarea::placeholder {
+  color: var(--placeholder);
+  opacity: 1; /* keep color exact */
+}
+/* Make sure disabled/readOnly placeholders are visible */
+input:disabled::placeholder, textarea:disabled::placeholder,
+input[readonly]::placeholder, textarea[readonly]::placeholder {
+  color: var(--placeholder);
+  opacity: 0.9;
+}
+
+/* Automatic readable text for explicit surfaces */
+.dark .bg-white, .dark .bg-white\/70, .dark .bg-white\/80, .dark .bg-white\/95,
+.dark .from-white, .dark .to-white { color: #0f172a !important; }
+.light-mode .bg-slate-900, .light-mode .bg-black, .dark .bg-slate-900, .dark .bg-black { color: #ffffff !important; }
+
+
+/* Light/Dark theming (minimal, no component rewrites) */
+.light-mode{ 
+  background: linear-gradient(to bottom right, #ffffff, #f8fafc); 
+  color: #0f172a; 
+}
+.dark-mode{ 
+  background: linear-gradient(to bottom right, #0b1220, #111827); 
+  color: #e5e7eb; 
+}
+/* Tweak a few surfaces so they look good in dark without changing components */
+.dark-mode .navpills{ 
+  background: rgba(17,24,39,0.6); 
+  border-color: #1f2937; 
+}
+.dark-mode .navpills button{ color:#cbd5e1; }
+.dark-mode .navpills button:first-child{ background:#e5e7eb; color:#0b1220; }
+.dark-mode .card{ 
+  background:#0f172a !important; 
+  border-color:#1f2937 !important; 
+  color:#e5e7eb; 
+}
+.dark-mode .modal{ background:#0b1220 !important; color:#e5e7eb; }
+.dark-mode .modal .border-slate-200{ border-color:#1f2937; }
+.dark-mode .modal .bg-slate-50{ background:#0f172a; }
+
+html, body, #root{ height:100%; }
+body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.shadow-innerSoft{ box-shadow: inset 0 2px 0 rgba(255,255,255,0.6), inset 0 -3px 0 rgba(0,0,0,0.12); }
+
+/* ---- App-level additions for parallax & placeholders ---- */
+.bg-app{ background-color: var(--bg); color: var(--text); }
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark select::placeholder{ color:#ffffff; opacity:1; }
+.dark input, .dark textarea, .dark select{ color:#ffffff; }
+input, textarea, select{ color: var(--text); }
