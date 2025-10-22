@@ -36,7 +36,7 @@ export default function HeroCopy({ profile, onViewWork, isDark }){
           View Work
         </button>
         <a
-          href="mailto:hello@example.com"
+          href="swethasavadam@gmail.com"
           className="inline-flex items-center gap-2 bg-white text-slate-900 border border-slate-200 rounded-full px-4 py-2 text-sm shadow-sm hover:bg-slate-50"
         >
           Contact
