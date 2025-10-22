@@ -139,7 +139,7 @@ export default function O9ProspectResearch({ onClose }) {
             <div className="sticky top-0 h-[66vh] flex items-center justify-center px-6">
               <div className="text-center max-w-[1200px] w-full mx-auto">
                 <motion.h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-strong">
-                  Prospect Research Bot — Scrapy → Deck → Q&A
+                  Prospect Research Bot: Scrapy → Deck → Q&A
                 </motion.h3>
                 <p className="mt-3 text-app">
                   Crawl with <b>Scrapy</b>, extract supply-chain intel, enrich with LLMs, build a 10-card market deck, and enable Q&A over the deck.
