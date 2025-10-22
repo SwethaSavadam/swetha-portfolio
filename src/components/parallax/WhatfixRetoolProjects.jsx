@@ -135,7 +135,7 @@ export default function WhatfixRetoolProjects({ onClose }) {
               {/* Exec Dashboards */}
               <Card title="Exec Dashboards: one-click status" accent>
                 <p className="text-sm text-app mb-3">
-                  GRR, ARR, and P1 tickets in a single Retool view—no logins or spreadsheets.
+                  GRR, ARR, and P1 tickets in a single Retool view; no logins or spreadsheets.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <MiniChart title="GRR %" data={grr} dataKey="v" unit="%" />
