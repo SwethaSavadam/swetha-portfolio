@@ -1,3 +1,4 @@
+import ImpactBlock from '../shared/ImpactBlock'
 import React, { useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useBeep } from '../../utils/useBeep'
@@ -219,6 +220,27 @@ export default function O9Parallax({ onClose }) {
                 </ul>
               </motion.div>
             </div>
+
+            {/* NEW: Business Impact block (added without altering existing lines above) */}
+            <div className="mt-6">
+              <ImpactBlock
+                title="Business Impact"
+                problem="Exec and VP teams were working off fragmented spreadsheets and slide decks with conflicting metric definitions, slow weekly prep, and risks surfaced late."
+                solution="A single, theme-aware exec dashboard with one definition per metric, auto-refreshed weekly from the warehouse. Decision Board captures actions with owners and due dates; risk heat flags segments and accounts early."
+                points={[
+                  '“One source of truth” for GRR/NRR/Net ARR/Win rate across C- and VP-views',
+                  'Faster decisions via auto-generated weekly packs and live drill-downs',
+                  'Earlier detection of churn risk segments and at-risk accounts',
+                  'Clear ownership on KRAs — status visibility drives follow-through'
+                ]}
+                // kpis={[
+                //   { value: '−6h/wk', label: 'prep time' },
+                //   { value: '≤24h',   label: 'risk surfacing' },
+                //   { value: '↑',      label: 'exec alignment' },
+                // ]}
+              />
+            </div>
+
             <div className="h-10" />
           </section>
         </div>

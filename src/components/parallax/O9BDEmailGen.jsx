@@ -1,3 +1,4 @@
+import ImpactBlock from '../shared/ImpactBlock'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useBeep } from '../../utils/useBeep'
@@ -255,6 +256,23 @@ export default function O9BDEmailGen({ onClose }) {
                 <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
                   Example: 11.0% → 14.0% (≈ <b>27%</b> relative lift). Logged to your dashboard.
                 </p>
+              </Card>
+            </div>
+
+            {/* NEW: Business Impact block */}
+            <div className="max-w-[1200px] mx-auto mt-6">
+              <Card title="Business Impact">
+                <ImpactBlock
+                  problem="BD reps manually curated contacts and sent generic first-touch emails, leading to high bounce rates, low reply rates, and inconsistent compliance."
+                  solution="Automated a prospect-first workflow: find the right senior buyers, enrich and verify emails (NeverBounce threshold), generate contextual LLM drafts using company pains + relevant case studies, create Outreach drafts for owner approval, and schedule with safe windows, caps, and throttling."
+                  points={[
+                    'Fewer bounces via verified emails (NeverBounce threshold & catch-all review)',
+                    'Higher reply/meeting rate from contextual drafts (+≈27% relative lift vs baseline)',
+                    'Time saved for reps by automating enrichment, verification, and drafting',
+                    'Lower risk through DNC/GDPR guardrails, owner-approval gating, and throttling'
+                  ]}
+                  // kpis={[ { value: '↓', label: 'bounce rate' }, { value: '+27%', label: 'reply/meeting lift' }, { value: 'mins', label: 'time saved / lead' } ]}
+                />
               </Card>
             </div>
           </section>

@@ -11,6 +11,10 @@
   --panel: rgba(255,255,255,0.85);
   --placeholder: #64748b; /* slate-500 */
   --soft-ring: rgba(2,6,23,0.08);
+
+  /* accents used by some buttons/badges (e.g. bg-[var(--accent-2)]) */
+  --accent-1: #ff6b9a;
+  --accent-2: #ff6d2d;
 }
 .dark{
   --bg: #0b1220;
@@ -86,3 +90,17 @@ body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, san
 .dark select::placeholder{ color:#ffffff; opacity:1; }
 .dark input, .dark textarea, .dark select{ color:#ffffff; }
 input, textarea, select{ color: var(--text); }
+
+/* ---- Optional helpers to support bg-card/60..95 utility lookalikes ---- */
+/* Tailwind won't generate bg-card/60 because 'card' isn't a theme color.
+   These small shims keep existing JSX using bg-card/60..95 rendering as expected. */
+.bg-card\/60 { background-color: rgba(255,255,255,0.60); color: var(--text); }
+.bg-card\/70 { background-color: rgba(255,255,255,0.70); color: var(--text); }
+.bg-card\/80 { background-color: rgba(255,255,255,0.80); color: var(--text); }
+.bg-card\/90 { background-color: rgba(255,255,255,0.90); color: var(--text); }
+.bg-card\/95 { background-color: rgba(255,255,255,0.95); color: var(--text); }
+.dark .bg-card\/60 { background-color: rgba(15,23,42,0.60); color: var(--text); }
+.dark .bg-card\/70 { background-color: rgba(15,23,42,0.70); color: var(--text); }
+.dark .bg-card\/80 { background-color: rgba(15,23,42,0.80); color: var(--text); }
+.dark .bg-card\/90 { background-color: rgba(15,23,42,0.90); color: var(--text); }
+.dark .bg-card\/95 { background-color: rgba(15,23,42,0.95); color: var(--text); }

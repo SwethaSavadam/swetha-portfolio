@@ -1,3 +1,4 @@
+import ImpactBlock from '../shared/ImpactBlock'
 import React, { useMemo, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useBeep } from '../../utils/useBeep'
@@ -190,6 +191,23 @@ export default function O9CompetitiveInsights({ onClose }) {
                 <Templates />
               </Card>
             </div>
+
+            {/* NEW: Business Impact block (added without altering existing lines above) */}
+            <div className="mt-6">
+              <ImpactBlock
+                title="Business Impact"
+                problem="Account Managers manually kept track of competitors via Google News/Alerts with no standardization or clear CTA, so time-sensitive moves were missed during active pursuits."
+                solution="An automated ingestion + classification pipeline extracts real-time competitive signals and posts actionable Slack alerts to the owning AM and regional channels. Alerts include owner, next step, and a tracking link so the team can act immediately."
+                points={[
+                  'Real-time Slack alerts ensure the right people see signals instantly',
+                  'Standardized CTA: Assess → Assign → Engage → Track',
+                  'Regional visibility creates social accountability and faster response',
+                  'Fewer misses on competitor moves during active pursuits'
+                ]}
+                // kpis={[ { value: '≤60s', label: 'alert latency' }, { value: '↓', label: 'manual monitoring time' } ]}
+              />
+            </div>
+
             <div className="h-10" />
           </section>
         </div>

@@ -1,3 +1,4 @@
+import ImpactBlock from '../shared/ImpactBlock'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useBeep } from '../../utils/useBeep'
@@ -207,6 +208,26 @@ export default function WhatfixAgenticCopilot({ onClose }) {
                   <li>• <b>Audit log</b>: Q, plan, citations, confidence, chosen action → analytics.</li>
                 </ul>
               </Card>
+            </div>
+
+            {/* NEW: Business Impact block */}
+            <div className="max-w-[1200px] mx-auto mt-6">
+              <ImpactBlock
+                title="Business Impact"
+                problem="CSMs searched across Drive and Confluence for policy answers, giving inconsistent or outdated responses and no clear next steps—creating escalations and wasted time."
+                solution="Agentic copilot plans the task, retrieves trusted chunks with citations, writes a concise answer with confidence, and offers safe, human-approved actions via n8n (create tasks, drafts, updates). Everything is logged for analytics."
+                points={[
+                  'Cuts time-to-answer with authoritative, cited responses',
+                  'Consistent policy interpretation across teams and regions',
+                  'Safe operationalization: actions are drafts with human approval',
+                  'End-to-end audit trail (question → sources → action)'
+                ]}
+                // kpis={[
+                //   { value: '−60%', label: 'time-to-answer' },
+                //   { value: '↓',    label: 'policy escalations' },
+                //   { value: '↑',    label: 'CSM productivity' },
+                // ]}
+              />
             </div>
           </section>
 

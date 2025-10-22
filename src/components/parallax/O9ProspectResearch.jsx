@@ -1,3 +1,4 @@
+import ImpactBlock from '../shared/ImpactBlock'
 import React, { useMemo, useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useBeep } from '../../utils/useBeep'
@@ -262,6 +263,26 @@ export default function O9ProspectResearch({ onClose }) {
                   <li>• Ask: “Build a 30-day plan for {prospect}” → returns next steps + owners</li>
                 </ul>
               </Card>
+            </div>
+
+            {/* NEW: Business Impact block */}
+            <div className="max-w-[1200px] mx-auto mt-6">
+              <ImpactBlock
+                title="Business Impact"
+                problem="Manual prospect research lived across dozens of tabs (Google, filings, blogs), with unstructured notes and inconsistent decks. Prep took hours per account, insights went stale, and handoff to outreach lacked a single source of truth."
+                solution="An automated pipeline: Intake keywords → Scrapy crawl → parse/dedupe → LLM extraction/classification → financial normalization → news clustering → auto-compose a 10-card deck → share to Slack → index to pgvector for Q&A. Everything lives in one consistent artifact."
+                points={[
+                  'Cuts research & deck-prep time from hours to minutes per account',
+                  'Standardized 10-card deck improves quality and repeatability',
+                  'Always-fresh insights; easy Slack sharing for fast collaboration',
+                  'Indexed for Q&A so sellers can answer deep questions on the fly',
+                ]}
+                // kpis={[
+                //   { value: '−70%', label: 'prep time' },
+                //   { value: '↑',    label: 'deck quality consistency' },
+                //   { value: '≤24h', label: 'intel freshness' },
+                // ]}
+              />
             </div>
           </section>
         </div>
